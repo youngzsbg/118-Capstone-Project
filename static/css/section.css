@@ -1,0 +1,226 @@
+/* About Me Section */
+
+.about{
+    padding-top: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.about h4{
+    color: yellow;
+    margin-bottom: 0;
+    margin-top: 12px;
+}
+.about img{
+    width: 80%;
+}
+
+.about h1{
+    color: purple;
+}
+/* Skills Section */
+
+.skills-section {
+    padding: 2%;
+}
+
+.skills-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 50%;
+    margin: 2rem 0px;
+}
+
+/* Project Section */
+
+.projects-section{
+    padding: 2rem;
+    margin: 5rem 0px;
+}
+
+.project-card img{
+    width: 100%;
+    border-radius: 1%;
+}
+
+.project-card{
+    width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    border-radius: 1%;
+}
+
+.project-card:hover{
+    opacity: 0.5;
+    border: 1px solid var(--secondary-color);
+}
+
+.skills-container{
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5 rem;
+    margin-top: 0.5rem;
+}
+
+a p:nth-child(2), .experience-card p:nth-child(1){
+    font-weight: bolder;
+    font-size: 1.1rem;
+    margin: 0.5rem 0px;
+}
+
+a p:nth-child(3), .experience-card p:nth-child(2){
+    font-style: italic;
+}
+
+a p:nth-child(4), .experience-card p:nth-child(4){
+    font-style: italic;
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+    margin-top: 0.5rem;
+}
+
+.projects-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.projects-h2{
+    text-align: center;
+}
+
+.add-project-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.new-project-section{
+    background-color: var(--surface-color);
+    padding: .5rem;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+    margin-right: 75px;
+   
+    
+}
+.controls{
+    width: 23%;
+    margin-top: .2rem;  
+}
+
+
+
+/* Contact Section*/
+
+.contact-section{
+    padding-top: 1rem;
+}
+
+.contact-section form{
+    padding-top: 1.5rem;
+    background-color: var(--surface-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 20px 30px 10px 20px;
+    margin-top: 2rem;
+
+
+}
+
+.contact-section .field{
+    margin-bottom: 0.5rem;
+    width: 100%;
+
+}
+
+.contact-section .field label {
+    display: block;
+    color: var(--primary-color);
+}
+
+.contact-section .field input,
+.contact-section .field textarea {
+    width: 100%;
+    padding: 5px;
+}
+
+/*Post-list Section*/
+
+.post-list-section{
+
+
+}
+
+
+.post-list-section .header {
+    display: flex;
+    text-align: center;
+}
+
+.post-list-section .header h1{
+    flex: 1;
+    text-align: center;
+}
+
+.post-list-section .header a {
+    margin-right: 2rem;
+}
+
+/*create-post section
+
+/*button css*/
+
+.button-42 {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: var(--neutral-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 36px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 45%;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow .2s;
+}
+
+.button-42:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+
+/*Home section*/
+
+.home{
+    padding: 20px 0 0 0;
+}
+
+.home h1{
+    text-align: center;
+    color: purple;
+}
