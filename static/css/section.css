@@ -158,28 +158,58 @@ a p:nth-child(4), .experience-card p:nth-child(4){
 
 /*Post-list Section*/
 
-.post-list-section{
+.post-list{
+    background-color: black;
 
 
 }
 
 
-.post-list-section .header {
+.post-list .header-list {
     display: flex;
     text-align: center;
+    
 }
 
-.post-list-section .header h1{
+.post-list .header-list h1{
     flex: 1;
     text-align: center;
+    
 }
 
-.post-list-section .header a {
+.post-list .header-list a {
     margin-right: 2rem;
+    
 }
 
-/*create-post section
+/*create-post section*/
 
+.create-post{
+    padding: 2rem 1rem;
+    background-color: black;
+
+}
+
+.create-post h2 {
+    text-align: center;
+    color: purple;
+    font-size: xx-large;
+}
+
+.create-post form{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid purple;
+    border-radius: 4px;
+    padding: 0.5rem;
+    background-color: #f4f1f1;
+}
+
+.create-post form label{
+    font-weight: bold;
+}
 /*button css*/
 
 .button-42 {
@@ -218,9 +248,17 @@ a p:nth-child(4), .experience-card p:nth-child(4){
 
 .home{
     padding: 20px 0 0 0;
+    background-color: black;
 }
 
 .home h1{
     text-align: center;
     color: purple;
 }
+
+.bball-icon{
+    color: #E62C03;
+    padding-right: 10px;
+}
+
+/*List section*/

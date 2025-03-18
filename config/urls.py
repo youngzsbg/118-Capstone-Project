@@ -23,4 +23,5 @@ urlpatterns = [
     path("first_view", views.my_first_view, name="first_view"),
     path('', include('pages.urls')),
     path('posts/', include('posts.urls')),
+    path('accounts/',include('django.contrib.auth.urls')),
 ]
