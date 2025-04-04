@@ -12,6 +12,16 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import certifi
+import environ
+
+# create a secure connection
+os.environ['SSL_CERT_FILE'] = certifi.where()
+
+# load .env file
+env = environ.Env()
+environ.Env.read_env()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +36,9 @@ SECRET_KEY = 'django-insecure-l8*&1+dvp^b2anwnru0_ungu%cdjh_hy@j+6p3u=ui3)u39mw$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "herokuapp.com"
+]
 
 
 # Application definition
@@ -40,11 +52,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages',
     'posts',
+    'content',
 
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -131,3 +145,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "login"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# Email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_USE_SSL=False
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_HOST_USER=env('SMTP_EMAIL')
+EMAIL_HOST_PASSWORD=env('SMTP_PASS_NEW')

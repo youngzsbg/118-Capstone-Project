@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} New Post {% endblock %}
+{% block title %} Update Post {% endblock %}
 
 {% block content %}
 
 <div class="row create-post">
-    <h2>Create new Post</h2>
+    <h2>Update Your Post</h2>
 
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
 
         {{ form.as_p }}
 
-        <button class="btn btn-primary">Create Post</button>
+        <button class="btn btn-primary">Update Post</button>
     </form>
 
 </div>

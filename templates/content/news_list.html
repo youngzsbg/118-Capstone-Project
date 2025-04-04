@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="news-section">
+    <h1>Heres the Latest News!</h1>
+
+    <div class="news-list">
+
+        {% for new in news %}
+
+        <!--The article cards-->
+        <div class="news-card">
+            <a href="{{new.link}}" target="_blank">
+                <img src="{{new.image.url}}" alt="">
+                <p>{{new.name}}</p>
+                <p>{{new.description}}</p>
+                <p>{{new.year}}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock content %}

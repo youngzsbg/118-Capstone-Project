@@ -2,9 +2,9 @@
 :root{
     --primary-color: #E94B36; 
     --secondary-color: #DB724D;
-    --background-color: #111A4F;
-    --surface-color: #FCFBC2;
-    --neutral-color: #E3E6F2;
+    --background-color: black;
+    --surface-color: silver;
+    --neutral-color: purple;
 
     --indie-font: "Indie Flower", serif;
     --are-you-serious-font:  "Are You Serious", serif;

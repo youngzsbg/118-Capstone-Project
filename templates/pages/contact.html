@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block js %}
+<script>
+    function init(){
+        console.log("JS loaded");
+
+        const sent = document.getElementById("sentInput").value;
+
+        if(sent == "1"){
+            setTimeout(
+                () => {
+                    document.getElementById("pnlAlert").remove();
+                },
+                3000
+            );
+        }
+    }
+    window.onload = init
+</script>
+{% endblock %}
+
+{% block content %}
+    <section class="contact-section center-column">
+        <h1>Contact Me</h1>
+        <h2>Use the form below to say hi</h2>
+        <input type="hidden" value="{{sent}}" id="sentInput">
+        {% if sent == 1 %}
+            <div class="alert alert-success" id="pnlAlert">
+                Your message is sent
+            </div>
+        {% endif %}
+
+        <form method="post" class="center-column">
+            {% csrf_token %}
+
+            <div class="field">
+                <label>Name</label>
+                {{ form.name }}
+            </div>
+
+            <div class="field">
+                <label>Email</label>
+                {{ form.email }}
+            </div>
+
+            <div class="field">
+                <label>Message</label>
+                {{ form.message }}
+            </div>   
+            
+            <div class="field">
+                <button>Send Message</button>
+            </div>
+
+        </form>
+
+    </section>
+
+{% endblock %}

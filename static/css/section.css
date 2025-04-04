@@ -35,27 +35,27 @@
     margin: 2rem 0px;
 }
 
-/* Project Section */
+/* News Section */
 
-.projects-section{
-    padding: 2rem;
-    margin: 5rem 0px;
+.news-section{
+    background-color: black;
 }
 
-.project-card img{
+.news-card img{
     width: 100%;
     border-radius: 1%;
 }
 
-.project-card{
+.news-card{
     width: 25rem;
     display: flex;
     flex-wrap: wrap;
     padding: 0.5rem;
     border-radius: 1%;
+    background-color: silver;
 }
 
-.project-card:hover{
+.news-card:hover{
     opacity: 0.5;
     border: 1px solid var(--secondary-color);
 }
@@ -84,27 +84,28 @@ a p:nth-child(4), .experience-card p:nth-child(4){
     margin-top: 0.5rem;
 }
 
-.projects-list{
+.news-list{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     gap: 4rem;
     margin-top: 2rem;
+   
 }
 
-.projects-h2{
+.news-h2{
     text-align: center;
 }
 
-.add-project-container{
+.add-news-container{
     width: 100%;
     display: flex;
     justify-content: flex-end;
     
 }
 
-.new-project-section{
+.new-news-section{
     background-color: var(--surface-color);
     padding: .5rem;
     margin: 50px;
@@ -126,8 +127,13 @@ a p:nth-child(4), .experience-card p:nth-child(4){
 
 .contact-section{
     padding-top: 1rem;
+    /*background-color: black;*/
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqCUIaVgLdFG9_ueTugpsGh0M1ehDpg3qxzg&s);
+    width: 100%;
 }
-
+.contact-section h1, h2{
+    color: var(--surface-color);
+}
 .contact-section form{
     padding-top: 1.5rem;
     background-color: var(--surface-color);
@@ -158,12 +164,15 @@ a p:nth-child(4), .experience-card p:nth-child(4){
 
 /*Post-list Section*/
 
+
 .post-list{
     background-color: black;
 
 
 }
-
+.post-list .card-body img{
+    max-width: 100%;
+}
 
 .post-list .header-list {
     display: flex;
@@ -174,6 +183,7 @@ a p:nth-child(4), .experience-card p:nth-child(4){
 .post-list .header-list h1{
     flex: 1;
     text-align: center;
+    color: var(--primary-color);
     
 }
 
@@ -181,7 +191,30 @@ a p:nth-child(4), .experience-card p:nth-child(4){
     margin-right: 2rem;
     
 }
+.post-list .card{
+    width: 18rem; 
+    margin-top: 15px;
+}
 
+.search-label{
+    color: var(--secondary-color);
+}
+
+.card-link{
+    color: var(--secondary-color);
+}
+.detail-container{
+    background-color: black;
+}
+.detail-container h1{
+    color: var(--primary-color);
+}
+.detail-text{
+    color: var(--secondary-color);
+}
+ .detail-text p {
+    color: var(--secondary-color);
+ }
 /*create-post section*/
 
 .create-post{
@@ -192,7 +225,7 @@ a p:nth-child(4), .experience-card p:nth-child(4){
 
 .create-post h2 {
     text-align: center;
-    color: purple;
+    color: var(--primary-color);
     font-size: xx-large;
 }
 
@@ -246,9 +279,19 @@ a p:nth-child(4), .experience-card p:nth-child(4){
 
 /*Home section*/
 
+.home img{
+    max-width: fit-content;
+}
+.home-flex{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
 .home{
     padding: 20px 0 0 0;
     background-color: black;
+   
 }
 
 .home h1{
@@ -260,5 +303,52 @@ a p:nth-child(4), .experience-card p:nth-child(4){
     color: #E62C03;
     padding-right: 10px;
 }
+.home-gameplan{
+    width: 50%;
+}
 
 /*List section*/
+
+
+/* Post comment section*/
+
+.comments-container{
+    margin-top: 1rem;
+
+}
+.comments-container h4{
+    color: silver;
+}
+.comment{
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    padding: 6px;
+    max-width: 600px;
+    background-color: var(--surface-color);
+
+    
+}
+.comment p{
+    color: var(--secondary-color);
+}
+ 
+.comment .author {
+    font-weight: bold;
+    font-family:var( --indie-font);
+}
+
+.comment .date{
+    color: #555;
+    text-align: right;
+    display: block;
+}
+
+.comment form{
+    text-align: right;
+}
+.comment form textarea{
+    display: inline-block;
+    width: 100%;
+}
+

@@ -12,14 +12,29 @@
             <h1>Posts</h1>
 
             <a class="btn btn-outline-primary" href="{% url 'posts_create' %}">Create New Post</a>
-        </div>   
+        </div>
+        <div class="filter">
+            <form method="get">
+                <label class="search-label">Search Post</label>
+                <input type="search" name="search">
+                <button type="submit" class="btn btn-outline-primary">Search</button>
+            </form>
+        </div>  
         
         <div class="container">
             <div class="row">
                 {% for item in posts_list %}
                     <div class="col-md-3 col-sm-6">
-                        <div class="card" style="width: 18rem; margin-top: 15px;">
+                        <div class="card">
                             <div class="card-body">
+
+                                {% if item.image %}
+                                <img src="{{item.image.url}}" alt="post">
+                                {% else %}
+                                <img src="https://th.bing.com/th/id/OIP.kYnDLwSRmmJ879zFz7wssgHaFN?w=198&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
+                                {% endif %}
+
+                                
                                 <h5 class="card-title">{{item.title}}</h5>
                                 <h6 class="card-subtitle mb-2 text-body-secondary">{{item.subtitle}}</h6>
                                 <h6 class="card-subtitle mb-2 text-body-secondary">{{item.author}}</h6>

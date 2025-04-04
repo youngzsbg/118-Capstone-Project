@@ -1,7 +1,6 @@
 header{
     background-color: var(--surface-color);
     height: 60px;
-    position: sticky;
     top: 0px;
 }
 
@@ -47,4 +46,8 @@ nav {
 .center-header-sections {
     display: flex;
     justify-content: center;
+}
+
+.username{
+    padding-right: 12px;
 }

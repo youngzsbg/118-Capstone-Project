@@ -6,10 +6,48 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Post #{{post.id}}</h1>
-    <h2>{{post.title}}</h2>
-    <h5>{{post.subtitle}}</h5>
-    <h6>Author: {{post.author}}</h6>
-    <strong>Created on: {{post.created_on}}</strong>
-    <p>{{post.body}}</p>
-{% endblock %}
+    <div class="detail-container">
+        <h1>Post #{{post.id}}</h1>
+        {% if item.image %}
+        <img src="{{item.image.url}}" alt="post">
+        {% else %}
+        <img src="https://th.bing.com/th/id/OIP.kYnDLwSRmmJ879zFz7wssgHaFN?w=198&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
+        {% endif %}
+        <div class="detail-text">
+            <h2>{{post.title}}</h2>
+            <h5>{{post.subtitle}}</h5>
+            <h6>Author: {{post.author}}</h6>
+            <strong>Created on: {{post.created_on}}</strong>
+            <p>{{post.body}}</p>
+        </div>
+
+        {% if user.username == post.author.username %}
+
+        <a class="btn btn-outline-primary" href="{% url 'post_update' post.id %}">Update Post</a>
+        {% endif %}
+
+        <hr>
+        <div class="comments-container">
+            <h4>Post Comments</h4>
+
+            {% for cm in comments %}
+                <div class="comment">
+                    <label class="author">{{cm.author}}</label>
+                    <p>{{cm.content}}</p>
+                    <label class="date">{{cm.created_on}}</label>
+                </div>
+            {% endfor %}
+
+            <div class="comment">
+                <label class="author">Create new comment</label>
+                <form method="post" action="{% url 'comment_create' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="post_id" value="{{post.id}}">
+                    <textarea name="comment" rows="3"></textarea>
+                    <button class="">Send>></button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %} 
