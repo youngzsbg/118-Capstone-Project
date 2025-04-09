@@ -8,8 +8,8 @@
 {% block content %}
     <div class="detail-container">
         <h1>Post #{{post.id}}</h1>
-        {% if item.image %}
-        <img src="{{item.image.url}}" alt="post">
+        {% if post.image %}
+        <img src="{{post.image.url}}" alt="post">
         {% else %}
         <img src="https://th.bing.com/th/id/OIP.kYnDLwSRmmJ879zFz7wssgHaFN?w=198&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
         {% endif %}

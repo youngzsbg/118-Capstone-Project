@@ -278,13 +278,17 @@ a p:nth-child(4), .experience-card p:nth-child(4){
 }
 
 /*Home section*/
+.img-thumbnail{
+    border: none;
+    background-color: black;
+}
 
-.home img{
-    max-width: fit-content;
+.home-img{
+    max-width: 75%;
 }
 .home-flex{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     
 }
 
@@ -292,6 +296,10 @@ a p:nth-child(4), .experience-card p:nth-child(4){
     padding: 20px 0 0 0;
     background-color: black;
    
+}
+.home-img{
+    height: 200px;
+    width: 100%;
 }
 
 .home h1{
@@ -305,6 +313,7 @@ a p:nth-child(4), .experience-card p:nth-child(4){
 }
 .home-gameplan{
     width: 50%;
+    font-size: 50px;
 }
 
 /*List section*/
