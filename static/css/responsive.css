@@ -50,6 +50,20 @@
         margin-left: 32px;
               
     }
+    .home-flex{
+        flex-direction: column;
+    }
+    .img-thumbnail{
+        width: 75%
+    }
+    .home h1{
+        margin-right: 70px;
+        font-size: 3rem;
+    }
+    .home-img2{
+        width: 60%
+    }
+
     
     /* Toggle function */
     .nav-btn {

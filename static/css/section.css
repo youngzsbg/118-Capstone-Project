@@ -37,6 +37,10 @@
 
 /* News Section */
 
+.news-section h1{
+    padding-top: 10px;
+}
+
 .news-section{
     background-color: black;
 }
@@ -289,11 +293,12 @@ a p:nth-child(4), .experience-card p:nth-child(4){
 .home-flex{
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     
 }
 
 .home{
-    padding: 20px 0 0 0;
+    padding: 20px;
     background-color: black;
    
 }
