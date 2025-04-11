@@ -38,7 +38,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "herokuapp.com",
-     "127.0.0.1"
+    "127.0.0.1",
+    'capstone-kendall-f510d2e2ee99.herokuapp.com'
 ]
 
 
